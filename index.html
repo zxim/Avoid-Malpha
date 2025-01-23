@@ -15,5 +15,20 @@
         <button id="retryButton" style="display: none;">Retry</button>
     </div>
     <script src="index.js"></script>
+    <script>
+        // F12 키 차단
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
+                event.preventDefault();
+                alert('동작 그만 밑장빼기냐?');
+            }
+        });
+
+        // 우클릭 차단
+        document.addEventListener('contextmenu', (event) => {
+            event.preventDefault();
+            alert('동작 그만 밑장빼기냐?');
+        });
+    </script>
 </body>
 </html>
